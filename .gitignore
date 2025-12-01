@@ -1,0 +1,67 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.kotlin
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# ============================
+# Maven / Gradle
+# ============================
+/target/         # Maven build folder
+/build/          # Gradle build folder
+.gradle/
+**/build/
+
+# ============================
+# Logs & Temp
+# ============================
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ============================
+# OS related
+# ============================
+.DS_Store      # macOS
+Thumbs.db      # Windows
+desktop.ini
+
+# ============================
+# Java
+# ============================
+*.class
+hs_err_pid*
+replay_pid*
+*.jar
+*.war
+*.ear
+
+### Mac OS ###
+.DS_Store
