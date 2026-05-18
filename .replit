@@ -28,3 +28,6 @@ args = "javac -sourcepath src -d out $(find src -name '*.java' | grep -v 'src/Ma
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[deployment]
+deploymentTarget = "cloudrun"
