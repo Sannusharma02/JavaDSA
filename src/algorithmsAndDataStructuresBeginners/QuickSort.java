@@ -10,7 +10,7 @@ public class QuickSort {
         }
         ArrayList<Integer> lessThanPivot = new ArrayList<Integer>();
         ArrayList<Integer> greaterThanPivot = new ArrayList<Integer>();
-        int pivot = list.getFirst();
+        int pivot = list.get(0);
         int length = list.size();
         for(int i = 1; i < length; i++){
             int currentValue = list.get(i);
