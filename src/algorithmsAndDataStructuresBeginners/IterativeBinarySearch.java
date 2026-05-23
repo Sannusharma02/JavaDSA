@@ -1,4 +1,4 @@
-package AlgorithmsAndDataStructuresBeginners;
+package algorithmsAndDataStructuresBeginners;
 
 public class IterativeBinarySearch {
     public static void main(String[] args) {

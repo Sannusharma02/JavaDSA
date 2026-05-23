@@ -27,7 +27,7 @@ public class Search {
         }
         return -1;
     }
-    public static void main(String[] args) {
+    static void main() {
         int[] arr = {6, 7, 2, 3, 4, 5};
         Search search = new Search();
         System.out.println(search.search(arr, 5));

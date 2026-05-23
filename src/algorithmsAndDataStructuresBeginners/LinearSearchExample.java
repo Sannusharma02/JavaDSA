@@ -1,4 +1,4 @@
-package AlgorithmsAndDataStructuresBeginners;
+package algorithmsAndDataStructuresBeginners;
 
 public class LinearSearchExample {
     public static void main(String[] args) {

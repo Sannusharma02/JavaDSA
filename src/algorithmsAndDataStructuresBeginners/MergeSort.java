@@ -1,4 +1,4 @@
-package AlgorithmsAndDataStructuresBeginners;
+package algorithmsAndDataStructuresBeginners;
 
 import java.util.ArrayList;
 import java.util.Arrays;

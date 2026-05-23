@@ -24,7 +24,7 @@ package blind75;
 //}
 public class Rotate {
 
-    public static void main(String[] args) {
+    static void main() {
         int[][] matrix = {
                 {1, 2, 3},
                 {4, 5, 6},

@@ -16,7 +16,7 @@ public class TwoSum {
         }
         return null;
     }
-    public static void main(String[] args) {
+    void main() {
         TwoSum ts = new TwoSum();
         int[] nums = {2, 7, 11, 15};
         int target = 9;
