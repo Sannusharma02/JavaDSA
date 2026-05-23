@@ -1,10 +1,11 @@
-modules = ["java-graalvm22.3"]
+run = "javac src/AlgorithmsAndDataStructuresBeginners/LargestEleArr.java && java -cp src/AlgorithmsAndDataStructuresBeginners LargestEleArr"modules = ["java-graalvm22.3"]
 [agent]
 expertMode = true
 stack = "BEST_EFFORT_FALLBACK"
 
 [nix]
 channel = "stable-25_05"
+packages = ["nano"]
 
 [workflows]
 runButton = "Project"
