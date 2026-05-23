@@ -28,3 +28,5 @@ args = "javac -sourcepath src -d out $(find src -name '*.java' | grep -v 'src/Ma
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+run = "javac src/AlgorithmsAndDataStructuresBeginners/LargestEleArr.java && java -cp src/AlgorithmsAndDataStructuresBeginners LargestEleArr"
