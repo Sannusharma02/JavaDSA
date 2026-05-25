@@ -14,7 +14,7 @@ public class CountTargetArray {
       int target = sc.nextInt();
 
       int count = countTargetElement(arr, target);
-      System.out.println("The target element appears " + count + " time(s) in the array");
+      System.out.println("The target element " + target + " appears " + count + " time(s) in the array");
     }
 
     public static int countTargetElement(int[] arr, int target){
