@@ -52,7 +52,7 @@ public class TimeComplexityExample {
     //  O(n)
     void halfDoubleLoop(int n) {
         for (int i = 0, j = n; i<j ; i++ ,j--){ //  O(n)
-            // some logi c//  O(1)
+            // some log i c//  O(1)
         }
     }
     //  O(n^2) -> O(n) * O(n)
@@ -60,7 +60,7 @@ public class TimeComplexityExample {
 
         int n = arr.length;
         for(int i = 0; i < n - 1; i++){ //  O(n)
-            for(int j = 0; j < n -1 -i; jf++){   //  O(n)
+            for(int j = 0; j < n -1 -i; j++){   //  O(n)
 
                 int temp =arr[i];   //  O(1)
                 arr[i] = arr[j + 1];    //  O(1)
@@ -69,7 +69,7 @@ public class TimeComplexityExample {
         }
     }
 
-    // O(nlog(n))   -> Masters Theorem
+    // O(n log(n))   -> Masters Theorem
     void mergeSort(int[] arr, int low, int high){
         if(low<high){
             int mid = (low+high)/2;
