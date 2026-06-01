@@ -19,8 +19,6 @@ public class MissingNumber {
             for(int j = arr[i]+1; j < arr[i+1]; j++){
                     System.out.println(j);
             }
-
         }
     }
-
 }
