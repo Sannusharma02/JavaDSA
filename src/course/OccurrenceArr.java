@@ -22,8 +22,8 @@ public class OccurrenceArr  {
 }
 
        // occurrenceArr(nums);
-    }
-
+//    }
+//
 //    public static void occurrenceArr(int[] arr) {
 ////for (int i=0;i<arr.length;i++){
 //        for (int j : arr) {
@@ -35,5 +35,5 @@ public class OccurrenceArr  {
 //        }
 //    }?
 //}}
-}
+//}
 
