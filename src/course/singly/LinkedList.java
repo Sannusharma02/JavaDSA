@@ -22,7 +22,7 @@ public class LinkedList {
             return;
         }
 
-        newwNode.next=head.next;
+        newwNode.next=head;
         head=newwNode;
     }
 
@@ -40,7 +40,55 @@ public class LinkedList {
     }
 
     public void insertAtPosition(int data, int position){
-        Node newwNode = new Node(data);
+        Node newNode = new Node(data);
+        if(position<0){
+            System.out.println("Invalid position");
+            return;
+        }
+        if(position==0){
+            newNode.next = head;
+            head =newNode;
+            return;
+        }
+        Node current = head;
+        int index = 0;
+        
+        while(current!=null && index<position-1){
+            current = current.next;
+            index++;
+        }
+        if(current==null){
+            System.out.println("Invalid position! Out of bounds");
+            return;
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+        
     }
 
+    public void printData(){
+        Node current = head;
+        if(current==null){
+            System.out.println("List is empty");
+            return;
+        }
+        while(current!=null){
+            System.out.print(current.data+" ==> ");
+            current = current.next;
+        }
+        
+    }
+
+    public static void main(String [] args){
+        LinkedList list = new LinkedList();
+        list.insertAtBeginning(10);
+        list.insertAtBeginning(20);
+        list.insertAtBeginning(30);
+        list.insertAtEnd(40);
+        list.insertAtPosition(50,2);
+        list.insertAtPosition(50,0);
+        list.printData();
+    }
+    
 }
