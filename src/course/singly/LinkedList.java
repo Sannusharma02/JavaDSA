@@ -80,6 +80,49 @@ public class LinkedList {
         
     }
 
+    public void deleteFromBeginning(int data){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node current = head;
+        current=current.next;
+    }
+
+    public void deleteFromEnd(int data){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        if(head.next==null){
+            head=null;
+            return;
+        }
+        Node current = head;
+        while(current.next.next!=null)
+            current = current.next;
+        current.next=null;
+     }
+
+     public void deleteFromPosition(int position){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node current = head;
+        if(position<0){
+            System.out.println("Invalid position");
+        }
+        if(position==0){
+            head=head.next;
+        }
+        for(int i=0;i< position-1 && current!= null; i++){
+            current = current.next;
+        }
+
+
+     }
+
     public static void main(String [] args){
         LinkedList list = new LinkedList();
         list.insertAtBeginning(10);
@@ -87,7 +130,8 @@ public class LinkedList {
         list.insertAtBeginning(30);
         list.insertAtEnd(40);
         list.insertAtPosition(50,2);
-        list.insertAtPosition(50,0);
+        list.insertAtPosition(51,1);
+        list.insertAtPosition(52,0);
         list.printData();
     }
     
