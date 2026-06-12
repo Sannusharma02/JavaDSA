@@ -81,16 +81,16 @@ public class LinkedList {
         
     }
 
-    public void deleteFromBeginning(int data){
+    public void deleteFromBeginning(){
         if(head==null){
             System.out.println("List is empty");
             return;
         }
         Node current = head;
-        current=current.next;
+        head = head.next;
     }
 
-    public void deleteFromEnd(int data){
+    public void deleteFromEnd(){
         if(head==null){
             System.out.println("List is empty");
             return;
@@ -113,6 +113,7 @@ public class LinkedList {
         Node current = head;
         if(position<0){
             System.out.println("Invalid position");
+            return;
         }
          
         if(position==0){
@@ -137,6 +138,7 @@ public class LinkedList {
         while(current!=null){
             if(current.data==data)
                 return true;
+            current = current.next;
         }
         return false;
     }
@@ -146,7 +148,8 @@ public class LinkedList {
         System.out.println("Enter 1 To Insert");
         System.out.println("Enter 2 To Delete");
         System.out.println("Enter 3 To Search");
-        System.out.println("Enter 4 To EXIT");
+        System.out.println("Enter 4 To Print");
+        System.out.println("Enter 5 To EXIT");
         System.out.println("**************************");
     }
 
@@ -164,28 +167,87 @@ public class LinkedList {
     
     public static void main(String [] args){
         System.out.println("********** Welcome to Linked List App **********");
+        LinkedList linkedList = new LinkedList();
         Scanner scanner = new Scanner(System.in);
         while(true){
             try{
                 printMenu();
                 int choice = scanner.nextInt();
                 if (choice == 1){
-                    
+                    insertIntoLinkedList(linkedList);
                 } else if(choice == 2){
-                    
+                    deleteFromLinkedList(linkedList);
                 } else if(choice == 3){
-                    
-                } else if(choice == 4){
-                    
+                    System.out.println("Enter the data to search");
+                    int data = scanner.nextInt();  
+                    if(linkedList.searchData(data))
+                        System.out.println("Data found");
+                    else
+                        System.out.println("Data not found");
+                }else if(choice == 4){
+                     linkedList.printData();
+                     System.out.println();
+            }
+                else if(choice == 5){
+                      System.out.println("Exiting the program. Goodbye!");
+                      break;
                 } else {
                     System.out.println("Invalid choice! Please enter a valid option.");
                 }
             } catch(Exception e){
                 System.out.println("Invalid input! Please enter a valid number.");
             } finally{
-                
+            
             }
         }
+    }
+
+    private static void deleteFromLinkedList(LinkedList linkedList){
+        
+        Scanner scanner = new Scanner(System.in);
+        printDeleteMenu();
+        int deleteChoice = scanner.nextInt();
+
+        if(deleteChoice == 1){
+             linkedList.deleteFromBeginning();
+             System.out.println("Deleted from beginning");
+        }
+        else if(deleteChoice == 2){
+            linkedList.deleteFromEnd();
+            System.out.println("Deleted from end");
+        }
+        else if(deleteChoice == 3){
+             System.out.println("Enter the position to delete");
+             int position = scanner.nextInt();
+             linkedList.deleteFromPosition(position);
+             System.out.println("Deleted from position "+position);
+        }
+        else{
+            System.out.println("Invalid choice! Please enter a valid option.");
+        }
+    }
+
+    private static void insertIntoLinkedList(LinkedList linkedList){
+         Scanner scanner = new Scanner(System.in);
+         printInsertMenu();
+         int insertChoice = scanner.nextInt();
+         System.out.println("Enter the data to insert");
+         int data = scanner.nextInt();
+         if(insertChoice == 1)
+             linkedList.insertAtBeginning(data);
+         else if(insertChoice == 2)
+             linkedList.insertAtEnd(data);
+         else if(insertChoice == 3){
+              System.out.println("Enter the position to insert at");   
+              int position = scanner.nextInt();
+              linkedList.insertAtPosition(data, position);
+          }
+         else {
+              System.out.println("Invalid choice! Please enter a valid option.");
+              return;                                   
+          }
+         linkedList.printData();
+        System.out.println();
     }
     
     // public static void main(String [] args){
