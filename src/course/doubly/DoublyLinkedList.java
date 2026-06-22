@@ -60,5 +60,31 @@ public class DoublyLinkedList{
       tail = newNode;
     current.next = newNode;
   }
-  
+
+  public void deleteFront(){
+    if (head==null){
+      System.out.println("List is empty");
+      return;
+    }
+    if(head.next==null){
+      head=null;
+      tail=null;
+    } else {
+      head=head.next;
+      head.prev=null;
+    }
+  }
+
+  public  void deleteEnd(){
+    if (tail==null){
+      System.out.println("List is empty");
+    }
+    if(tail.prev==null) {
+      tail = null;
+    }
+    tail=tail.prev;
+    tail.next = null;
+  }
+
+
 }
