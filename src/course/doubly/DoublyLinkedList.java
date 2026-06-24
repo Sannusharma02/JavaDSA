@@ -78,12 +78,57 @@ public class DoublyLinkedList{
   public  void deleteEnd(){
     if (tail==null){
       System.out.println("List is empty");
+      return;
     }
     if(tail.prev==null) {
       tail = null;
+      return;
     }
     tail=tail.prev;
     tail.next = null;
+  }
+
+  public void deleteAtPosition(int position){
+    if(position<0){
+      System.out.println("Invalid position");
+    }
+    if(position==0){
+      deleteFront();
+    }
+    Node curremt = head;
+    int index = 0;
+    while (index<position-1 && curremt!=null){
+      curremt = curremt.next;
+      index++;
+    }
+    if(curremt==null){
+      System.out.println("List is empty");
+    }
+    if(curremt.next==null){
+      deleteEnd();
+    }
+    else{
+      curremt.next.prev = curremt.prev;
+    }
+  }
+
+  public void displayBackward() {
+    Node current = tail;
+    while(current!=null){
+      System.out.println(current.data+ "\t");
+      current = current.next;
+    }
+    System.out.println();
+
+  }
+
+  public void displayForward() {
+    Node current = head;
+    while(current!=null){
+      System.out.println(current.data+ "\t");
+      current = current.next;
+    }
+    System.out.println();
   }
 
 
